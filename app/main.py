@@ -58,7 +58,7 @@ with st.sidebar:
 
 st.sidebar.markdown('---')
 
-option = st.sidebar.selectbox("MENU : ", ('à propos', 'action (stocks)', 'Analyse de données', 'finance dashboard', 'pattern'), 0)
+option = st.sidebar.selectbox("MENU : ", ('à propos', 'action (stocks)', 'Analyse de données', 'finance dashboard'), 0)
 
 st.sidebar.markdown('---')
 st.sidebar.markdown("""<h3><strong>Technos utilisés: </strong></h3><br/>
