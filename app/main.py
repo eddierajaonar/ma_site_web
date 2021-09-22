@@ -18,6 +18,16 @@ SOURCE_FILE = Path(__file__).resolve() # pour recuperer le realpath au cas où c
 SOURCE_DIR = SOURCE_FILE.parent
 COMPONENT_DIR = SOURCE_DIR / "components"
 
+# hide the hamburger meny in top right 
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # function #1 to generate a HREF for an image 
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
@@ -110,3 +120,4 @@ if option == 'Analyse de données':
 
 if option == 'finance dashboard':
     finance_dashboard()
+    
