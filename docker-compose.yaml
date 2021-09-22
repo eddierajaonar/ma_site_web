@@ -1,7 +1,16 @@
 version: "3"
 
 services: 
+
   site-eddie-streamlit:
-    build: ./ # build from the dockerfile inside the same folder of this docker-compose.yaml file
+    #build: ./ # build from the dockerfile inside the same folder of this docker-compose.yaml file
+    image: site-eddie-streamlit
+    container_name: site-eddie-streamlit
     ports:
       - "8501:8501" 
+
+  site-eddie-flask:
+    image: site-eddie-flask
+    container_name: site-eddie-flask
+    ports:
+      - "5000:5000"
