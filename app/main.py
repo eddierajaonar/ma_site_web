@@ -17,6 +17,7 @@ import streamlit.components.v1 as components
 SOURCE_FILE = Path(__file__).resolve() # pour recuperer le realpath au cas où c'est un lien symbolique
 SOURCE_DIR = SOURCE_FILE.parent
 COMPONENT_DIR = SOURCE_DIR / "components"
+IMAGE_DIR = SOURCE_DIR / "images"
 
 # hide the hamburger meny in top right 
 hide_streamlit_style = """
@@ -47,11 +48,11 @@ def get_img_with_href(local_img_path, target_url):
     return html_code
 
 
-photo = get_img_with_href('images/eddie.png', '#')
-badge_django = get_img_with_href('images/django-200x200.png', 'https://skillvalue.com/fr/user/certificate/i7N4up4Jc9Hg9Ua6k8A99ywWFu33kripQdHd3UznUDTwvhNVBDKv17Le7Ges')
-badge_splunk = get_img_with_href('images/SplunkEnterprise_Certified-Admin-600px.png', 'https://www.credly.com/badges/748bd1da-1720-483f-8917-1336665f9fe9')
-badge_bigdata = get_img_with_href('images/BigData.png', 'https://www.youracclaim.com/badges/3f121e42-6182-4dab-859e-1b8480dd598c/public_url')
-badge_hadoop = get_img_with_href('images/hadoop.png', 'https://www.youracclaim.com/badges/8e445f33-a425-4e8f-9659-a6a3def8c4d6/public_url')
+photo = get_img_with_href(IMAGE_DIR/'eddie.png', '#')
+badge_django = get_img_with_href(IMAGE_DIR/'django-200x200.png', 'https://skillvalue.com/fr/user/certificate/i7N4up4Jc9Hg9Ua6k8A99ywWFu33kripQdHd3UznUDTwvhNVBDKv17Le7Ges')
+badge_splunk = get_img_with_href(IMAGE_DIR/'SplunkEnterprise_Certified-Admin-600px.png', 'https://www.credly.com/badges/748bd1da-1720-483f-8917-1336665f9fe9')
+badge_bigdata = get_img_with_href(IMAGE_DIR/'BigData.png', 'https://www.youracclaim.com/badges/3f121e42-6182-4dab-859e-1b8480dd598c/public_url')
+badge_hadoop = get_img_with_href(IMAGE_DIR/'hadoop.png', 'https://www.youracclaim.com/badges/8e445f33-a425-4e8f-9659-a6a3def8c4d6/public_url')
 
 
 st.sidebar.markdown("""<h2><strong>Eddie RAJAONARIVELO</strong></h2>\
